@@ -1,0 +1,122 @@
+.topnav
+{
+    background-color: white;
+    padding: 10px;
+    /* height: 50px; */
+     /* box-shadow: 0 2px 5px 0;
+     position: fixed; 
+    top: 0;
+    width: 100%;   */
+} 
+
+.sidenav{
+    background-color: #353a40;
+    position: fixed;
+    width: 246px;
+    margin-top: 91px;
+    transition: margin-left 0.8s;
+}
+.nav-link
+{
+    /* text-align: center; */
+    color: white;
+}
+.nav-link:hover
+{
+    background-color: red;
+    color: white;
+}
+.projectdetails
+{
+    margin-top: 120px;
+}
+.project
+{
+    border: 1px solid white;
+    padding: 2px;
+    box-shadow: 2px 2px 2px 2px rgb(247, 241, 241);
+    border-radius: 10px;
+}
+.item 
+{
+    border: 1px solid white;
+    padding: 2px;
+    box-shadow: 2px 2px 2px 2px rgb(247, 241, 241);
+    border-radius: 10px;
+}
+/* .shadow
+{
+    padding:1px;
+    margin-left: 10px;
+} */
+table
+{
+    margin-top: 20px;
+}
+.Itemdetails
+{
+    margin-top: 20px;
+}
+.fa-solid
+{
+    color: black;
+}
+.fa-magnifying-glass
+{
+    color: white;
+}
+.nav-hidden
+{
+    width: 245px;
+}
+/* .my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+} */
+
+/* tbody{
+    height:200px;
+    display:block;
+    overflow:scroll
+  } */
+  table, tr td {
+    border: 1px solid #333
+}
+
+  tbody {
+    display: block;
+    height: 180px;
+    overflow: auto;
+}
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;/* even columns width , fix width of table too*/
+}
+/* thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width 
+} */
+table {
+    width: 400px;
+}
+.nav-hidden {
+    margin-left: -246px;
+}
+
+/* Main content */
+.main-content {
+    transition: margin-left 0.8s;
+    
+}
+
+.main-content-expanded {
+    margin-left: 0;
+}
+
+.main-content-collapsed {
+    margin-left: -246px;
+}
