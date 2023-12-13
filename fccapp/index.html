@@ -18,6 +18,7 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/fcc.js"></script>
 		<title>FCC</title>
 	</head>
 	<body>
@@ -27,12 +28,11 @@
 			<div class="container-fulid">
 				<div class="row">
 					<div class="col-sm-2">
-						<img src="photo/FCC.png" alt="fcc" style="width: 100%" />
+						<img src="photo/FCC.png" alt="fcc" class="fcc" style="width: 80%" />
 					</div>
-
 					<div class="col-sm-4 mt-3">
 						<div class="row">
-							<div class="col-sm-1 mt-1">
+							<div class="col-sm-1">
 								<a
 									href="#"
 									data-toggle="tooltip"
@@ -42,30 +42,38 @@
 									<i class="fa-solid fa-bars" id="navtoggle"></i
 								></a>
 							</div>
-							<div class="col-sm-1 mt-1">
-								<i class="fa-solid fa-backward-step"></i>
+							<div class="col-sm-1">
+								<a href="#" data-toggle="tooltip" title="First" data-placement="bottom">
+								<i class="fa-solid fa-backward-step"></i></a>
 							</div>
-							<div class="col-sm-1 mt-1">
-								<i class="fa-solid fa-angle-right"></i>
+							<div class="col-sm-1">
+								<a href="#" data-toggle="tooltip" title="Previous" data-placement="bottom">
+								<i class="fa-solid fa-angle-left"></i></a>
 							</div>
 							<div class="col-sm-6">
 								<div class="form-group">
-									<input type="text" class="form-control" name="name" />
+									<input type="text" class="form-control" name="name" style="height: 26px;"/>
 								</div>
 							</div>
-							<div class="col-sm-1 mt-1">
-								<i class="fa-solid fa-angle-left"></i>
+							<div class="col-sm-1">
+								<a href="#" data-toggle="tooltip" title="Next" data-placement="bottom">
+								<i class="fa-solid fa-angle-right"></i></a>
 							</div>
-							<div class="col-sm-1 mt-1">
-								<i class="fa-solid fa-forward-step"></i>
+							<div class="col-sm-1">
+								<a href="#" data-toggle="tooltip" title="Last" data-placement="bottom">
+								<i class="fa-solid fa-forward-step"></i></a>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-sm-6 mt-3">
+					<div class="col-sm-6 mt-1">
 						<div class="row justify-content-end">
-							<div class="col-sm-1 mt-1">
-								<i class="fa-solid fa-user"></i>
+							<!-- <div class="col-sm-1">
+								<p>fccadmin</p>
+							</div> -->
+							<div class="col-sm-2">
+								<i class="fa-solid fa-user fa-1x ml-4"></i>
+								<p style="margin-left: 3%;">fccadmin</p>
 							</div>
 						</div>
 					</div>
@@ -82,7 +90,7 @@
 					<div class="col-sm-2">
 						<div class="sidenav">
 							<ul class="nav flex-column vh-100">
-								<li class="nav-item mt-2">
+								<li class="nav-item mt-4">
 									<p><a class="nav-link" href="#">Dashboard</a></p>
 								</li>
 								<li class="nav-item">
@@ -93,10 +101,14 @@
 								</li>
 								<li class="nav-item">
 									<p>
-										<a class="nav-link" href="#"
-											>Accessories, Order Processing</a
-										>
+										<a class="nav-link" href="#">Valve Sizing</a>
 									</p>
+								</li>
+								<li class="nav-item">
+									<p><a class="nav-link" href="#">Actuator Sizing</a></p>
+								</li>
+								<li class="nav-item">
+									<p><a class="nav-link" href="#">Accessories, Order Processing</a></p>
 								</li>
 								<li class="nav-item">
 									<p><a class="nav-link" href="#">Item Notes</a></p>
@@ -127,15 +139,15 @@
 								<div class="project">
 									<div class="row">
 										<div class="col-sm-6 mt-3">
-											<div class="row" style="margin-left: 5px">
+											<div class="row" style="margin-left: 1px">
 												<div class="col-sm-2">
-													<h5><b>Project</b></h5>
+													<h5 style="font-size: 20px;"><b>Project</b></h5>
 												</div>
 												<div class="col-sm-1">
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="create"
+														title="Create"
 														data-placement="bottom"
 													>
 														<i class="fa-solid fa-plus"></i
@@ -145,7 +157,7 @@
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="delete"
+														title="Delete"
 														data-placement="bottom"
 													>
 														<i class="fa-solid fa-xmark"></i
@@ -155,7 +167,7 @@
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="download"
+														title="Download"
 														data-placement="bottom"
 													>
 														<i class="fa-solid fa-download"></i
@@ -165,7 +177,7 @@
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="upload"
+														title="Upload"
 														data-placement="bottom"
 													>
 														<i class="fa-solid fa-upload"></i
@@ -175,7 +187,7 @@
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="copy"
+														title="Copy"
 														data-placement="bottom"
 													>
 														<i class="fa-solid fa-copy"></i
@@ -185,19 +197,20 @@
 										</div>
 
 										<div class="col-sm-6 mt-1">
-											<div class="row">
-												<div class="col-sm-10">
+											<div class="row justify-content-end">
+												<div class="col-sm-8">
 													<div class="form-group">
 														<input
 															type="text"
 															name="name"
 															placeholder="Search........."
 															class="form-control"
+															id="projectinput"
 														/>
 													</div>
 												</div>
-												<div class="col-sm-1">
-													<button type="button" class="btn btn-primary">
+												<div class="col-sm-2">
+													<button type="button" class="btn btn-primary" id="btn">
 														<i class="fa-solid fa-magnifying-glass"></i>
 													</button>
 												</div>
@@ -218,37 +231,37 @@
 									class="table table-striped table-bordered"
 									style="width: 100%"
 								>
-									<thead>
-										<tr>
-											<th style="text-align: left; width: 4%">No</th>
+									<thead class="table-sm" style="font-size: 12px;">
+										<tr class="table-sm">
+											<th style="text-align: left; width: 4%;">No</th>
 											<th style="text-align: left; width: 8%">Industry</th>
 											<th style="text-align: left; width: 7%">Region</th>
 											<th style="text-align: left; width: 7%">Quote</th>
 											<th style="text-align: left; width: 7%">Status</th>
-											<th style="text-align: left; width: 9%">Customer</th>
+											<th style="text-align: left; width: 12%">Customer</th>
 											<th style="text-align: left; width: 10%">Enquire Ref</th>
 											<th style="text-align: left; width: 9%">Received</th>
-											<th style="text-align: left; width: 8%">Engineer</th>
+											<th style="text-align: left; width: 10%">Engineer</th>
 											<th style="text-align: left; width: 10%">Due date</th>
 											<th style="text-align: left">Work Order no</th>
 											<th style="text-align: left; width: 70px">Print</th>
 										</tr>
 									</thead>
 
-									<tbody class="table-sm">
+									<tbody class="table-sm" style="height: 90px; font-size: 12px;" id="projectlist">
 										<tr>
 											<td style="text-align: left; width: 4%">1</td>
 											<td style="text-align: left; width: 8%">Agriculture</td>
 											<td style="text-align: left; width: 7%">Asia</td>
 											<td style="text-align: left; width: 7%">501</td>
 											<td style="text-align: left; width: 7%">Live</td>
-											<td style="text-align: left; width: 9%">customer_1</td>
+											<td style="text-align: left; width: 12%">customer_1</td>
 											<td style="text-align: left; width: 10%">customer_2</td>
 											<td style="text-align: left; width: 9%">2023-12-11</td>
-											<td style="text-align: left; width: 8%">Divya</td>
+											<td style="text-align: left; width: 10%">Divya</td>
 											<td style="text-align: left; width: 10%">2023-12-11</td>
 											<td style="text-align: left" ;>1</td>
-											<td style="text-align: left; width: 70px" ;>
+											<td style="text-align: center; width: 70px" ;>
 												<i class="fa-solid fa-print"></i>
 											</td>
 										</tr>
@@ -257,15 +270,15 @@
 											<td style="text-align: left; width: 4%">1</td>
 											<td style="text-align: left; width: 8%">Agriculture</td>
 											<td style="text-align: left; width: 7%">Asia</td>
-											<td style="text-align: left; width: 7%">501</td>
+											<td style="text-align: left; width: 7%">502</td>
 											<td style="text-align: left; width: 7%">Live</td>
-											<td style="text-align: left; width: 9%">customer_1</td>
+											<td style="text-align: left; width: 12%">customer_1</td>
 											<td style="text-align: left; width: 10%">customer_2</td>
 											<td style="text-align: left; width: 9%">2023-12-11</td>
-											<td style="text-align: left; width: 8%">Divya</td>
+											<td style="text-align: left; width: 10%">Divya</td>
 											<td style="text-align: left; width: 10%">2023-12-11</td>
 											<td style="text-align: left" ;>1</td>
-											<td style="text-align: left; width: 70px" ;>
+											<td style="text-align: center; width: 70px" ;>
 												<i class="fa-solid fa-print"></i>
 											</td>
 										</tr>
@@ -274,15 +287,15 @@
 											<td style="text-align: left; width: 4%">1</td>
 											<td style="text-align: left; width: 8%">Agriculture</td>
 											<td style="text-align: left; width: 7%">Asia</td>
-											<td style="text-align: left; width: 7%">501</td>
+											<td style="text-align: left; width: 7%">503</td>
 											<td style="text-align: left; width: 7%">Live</td>
-											<td style="text-align: left; width: 9%">customer_1</td>
+											<td style="text-align: left; width: 12%">customer_1</td>
 											<td style="text-align: left; width: 10%">customer_2</td>
 											<td style="text-align: left; width: 9%">2023-12-11</td>
-											<td style="text-align: left; width: 8%">Divya</td>
+											<td style="text-align: left; width: 10%">Divya</td>
 											<td style="text-align: left; width: 10%">2023-12-11</td>
 											<td style="text-align: left" ;>1</td>
-											<td style="text-align: left; width: 70px" ;>
+											<td style="text-align: center; width: 70px" ;>
 												<i class="fa-solid fa-print"></i>
 											</td>
 										</tr>
@@ -291,15 +304,15 @@
 											<td style="text-align: left; width: 4%">1</td>
 											<td style="text-align: left; width: 8%">Agriculture</td>
 											<td style="text-align: left; width: 7%">Asia</td>
-											<td style="text-align: left; width: 7%">501</td>
+											<td style="text-align: left; width: 7%">504</td>
 											<td style="text-align: left; width: 7%">Live</td>
-											<td style="text-align: left; width: 9%">customer_1</td>
+											<td style="text-align: left; width: 12%">customer_1</td>
 											<td style="text-align: left; width: 10%">customer_2</td>
 											<td style="text-align: left; width: 9%">2023-12-11</td>
-											<td style="text-align: left; width: 8%">Divya</td>
+											<td style="text-align: left; width: 10%">Divya</td>
 											<td style="text-align: left; width: 10%">2023-12-11</td>
 											<td style="text-align: left" ;>1</td>
-											<td style="text-align: left; width: 70px" ;>
+											<td style="text-align: center; width: 70px" ;>
 												<i class="fa-solid fa-print"></i>
 											</td>
 										</tr>
@@ -308,15 +321,15 @@
 											<td style="text-align: left; width: 4%">1</td>
 											<td style="text-align: left; width: 8%">Agriculture</td>
 											<td style="text-align: left; width: 7%">Asia</td>
-											<td style="text-align: left; width: 7%">501</td>
+											<td style="text-align: left; width: 7%">505</td>
 											<td style="text-align: left; width: 7%">Live</td>
-											<td style="text-align: left; width: 9%">customer_1</td>
+											<td style="text-align: left; width: 12%">customer_1</td>
 											<td style="text-align: left; width: 10%">customer_2</td>
 											<td style="text-align: left; width: 9%">2023-12-11</td>
-											<td style="text-align: left; width: 8%">Divya</td>
+											<td style="text-align: left; width: 10%">Divya</td>
 											<td style="text-align: left; width: 10%">2023-12-11</td>
 											<td style="text-align: left" ;>1</td>
-											<td style="text-align: left; width: 70px">
+											<td style="text-align: center; width: 70px">
 												<i class="fa-solid fa-print"></i>
 											</td>
 										</tr>
@@ -328,21 +341,21 @@
 						<!-- Item details -->
 						<div
 							class="container-fulid"
-							style="margin-left: 20px; margin-right: 40px"
+							style="margin-left: 20px; margin-right: 40px; margin-top: 40px;"
 						>
 							<div class="Itemdetails">
 								<div class="item">
 									<div class="row">
 										<div class="col-sm-6 mt-3">
-											<div class="row" style="margin-left: 5px">
+											<div class="row" style="margin-left: 1px">
 												<div class="col-sm-2">
-													<h5><b>Item</b></h5>
+													<h5 style="font-size: 20px;"><b>Item</b></h5>
 												</div>
 												<div class="col-sm-1">
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="create"
+														title="Create"
 														data-placement="bottom"
 													>
 														<i class="fa-solid fa-plus"></i
@@ -352,7 +365,7 @@
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="delete"
+														title="Delete"
 														data-placement="bottom"
 													>
 														<i class="fa-solid fa-xmark"></i
@@ -362,7 +375,7 @@
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="download"
+														title="Download"
 														data-placement="bottom"
 													>
 														<i class="fa-solid fa-download"></i
@@ -372,7 +385,7 @@
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="upload"
+														title="Upload"
 														data-placement="bottom"
 													>
 														<i class="fa-solid fa-upload"></i
@@ -382,7 +395,7 @@
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="copy"
+														title="Copy"
 														data-placement="bottom"
 													>
 														<i class="fa-solid fa-copy"></i
@@ -392,7 +405,7 @@
 													<a
 														href="#"
 														data-toggle="tooltip"
-														title="alternate"
+														title="Alternate"
 														data-placement="bottom"
 													>
 														<i
@@ -405,19 +418,20 @@
 										</div>
 
 										<div class="col-sm-6 mt-1">
-											<div class="row">
-												<div class="col-sm-10">
+											<div class="row justify-content-end">
+												<div class="col-sm-8">
 													<div class="form-group">
 														<input
 															type="text"
 															name="name"
 															placeholder="Search........."
 															class="form-control"
+															id="iteminput"
 														/>
 													</div>
 												</div>
-												<div class="col-sm-1">
-													<button type="button" class="btn btn-primary">
+												<div class="col-sm-2">
+													<button type="button" class="btn btn-primary" id="btn">
 														<i class="fa-solid fa-magnifying-glass"></i>
 													</button>
 												</div>
@@ -431,30 +445,30 @@
 									class="table table-striped table-bordered"
 									style="width: 100%"
 								>
-									<thead>
+									<thead class="table-sm" style="font-size: 12px;">
 										<tr>
 											<th style="text-align: left; width: 4%">No</th>
 											<th style="text-align: left; width: 5%">Item</th>
-											<th style="text-align: left; width: 4%">Alt</th>
+											<th style="text-align: center; width: 4%">Alt</th>
 											<th style="text-align: left; width: 10%">Tag Number</th>
-											<th style="text-align: left; width: 6%">Series</th>
+											<th style="text-align: center; width: 6%">Series</th>
 											<th style="text-align: left; width: 5%">Size</th>
 											<th style="text-align: left; width: 7%">Model</th>
 											<th style="text-align: left; width: 6%">Type</th>
 											<th style="text-align: left; width: 7%">Rating</th>
 											<th style="text-align: left; width: 14%">Material</th>
-											<th style="text-align: left" ;>Unit price</th>
-											<th style="text-align: left; width: 6%">Qty</th>
-											<th style="text-align: left" ;>Total price</th>
-											<th style="text-align: left; width: 70px">Print</th>
+											<th style="text-align: right" ;>Unit price</th>
+											<th style="text-align: center; width: 6%">Qty</th>
+											<th style="text-align: right" ;>Total price</th>
+											<th style="text-align: center; width: 70px">Print</th>
 										</tr>
 									</thead>
 
-									<tbody class="table-sm">
+									<tbody class="table-sm" style="height: 230px; font-size: 12px;" id="itemlist">
 										<tr>
 											<td style="text-align: left; width: 4%">1</td>
 											<td style="text-align: left; width: 5%">1</td>
-											<td style="text-align: left; width: 4%">A</td>
+											<td style="text-align: center; width: 4%">A</td>
 											<td style="text-align: left; width: 10%">101</td>
 											<td style="text-align: center; width: 6%">20</td>
 											<td style="text-align: left; width: 5%">3.in</td>
@@ -464,70 +478,7 @@
 											<td style="text-align: left; width: 14%">
 												ASTM A216 WCC
 											</td>
-											<td style="text-align: left">1</td>
-											<td style="text-align: center; width: 6%">1</td>
 											<td style="text-align: right">1</td>
-											<td style="text-align: center; width: 70px">
-												<i class="fa-solid fa-print"></i>
-											</td>
-										</tr>
-
-                                        <tr>
-											<td style="text-align: left; width: 4%">1</td>
-											<td style="text-align: left; width: 5%">1</td>
-											<td style="text-align: left; width: 4%">A</td>
-											<td style="text-align: left; width: 10%">101</td>
-											<td style="text-align: center; width: 6%">20</td>
-											<td style="text-align: left; width: 5%">3.in</td>
-											<td style="text-align: left; width: 7%">20-4401</td>
-											<td style="text-align: left; width: 6%">Globe</td>
-											<td style="text-align: left; width: 7%">150</td>
-											<td style="text-align: left; width: 14%">
-												ASTM A216 WCC
-											</td>
-											<td style="text-align: left">1</td>
-											<td style="text-align: center; width: 6%">1</td>
-											<td style="text-align: right">1</td>
-											<td style="text-align: center; width: 70px">
-												<i class="fa-solid fa-print"></i>
-											</td>
-										</tr>
-
-                                        <tr>
-											<td style="text-align: left; width: 4%">1</td>
-											<td style="text-align: left; width: 5%">1</td>
-											<td style="text-align: left; width: 4%">A</td>
-											<td style="text-align: left; width: 10%">101</td>
-											<td style="text-align: center; width: 6%">20</td>
-											<td style="text-align: left; width: 5%">3.in</td>
-											<td style="text-align: left; width: 7%">20-4401</td>
-											<td style="text-align: left; width: 6%">Globe</td>
-											<td style="text-align: left; width: 7%">150</td>
-											<td style="text-align: left; width: 14%">
-												ASTM A216 WCC
-											</td>
-											<td style="text-align: left">1</td>
-											<td style="text-align: center; width: 6%">1</td>
-											<td style="text-align: right">1</td>
-											<td style="text-align: center; width: 70px">
-												<i class="fa-solid fa-print"></i>
-											</td>
-										</tr>
-
-                                        <tr>
-											<td style="text-align: left; width: 4%">1</td>
-											<td style="text-align: left; width: 5%">1</td>
-											<td style="text-align: left; width: 4%">A</td>
-											<td style="text-align: left; width: 10%">101</td>
-											<td style="text-align: center; width: 6%">20</td>
-											<td style="text-align: left; width: 5%">3.in</td>
-											<td style="text-align: left; width: 7%">20-4401</td>
-											<td style="text-align: left; width: 6%">Globe</td>
-											<td style="text-align: left; width: 7%">150</td>
-											<td style="text-align: left; width: 14%">
-												ASTM A216 WCC
-											</td>
-											<td style="text-align: left">1</td>
 											<td style="text-align: center; width: 6%">1</td>
 											<td style="text-align: right">1</td>
 											<td style="text-align: center; width: 70px">
@@ -538,7 +489,7 @@
 										<tr>
 											<td style="text-align: left; width: 4%">1</td>
 											<td style="text-align: left; width: 5%">1</td>
-											<td style="text-align: left; width: 4%">A</td>
+											<td style="text-align: center; width: 4%">A</td>
 											<td style="text-align: left; width: 10%">101</td>
 											<td style="text-align: center; width: 6%">20</td>
 											<td style="text-align: left; width: 5%">3.in</td>
@@ -548,7 +499,7 @@
 											<td style="text-align: left; width: 14%">
 												ASTM A216 WCC
 											</td>
-											<td style="text-align: left">1</td>
+											<td style="text-align: right">1</td>
 											<td style="text-align: center; width: 6%">1</td>
 											<td style="text-align: right">1</td>
 											<td style="text-align: center; width: 70px">
@@ -559,7 +510,7 @@
 										<tr>
 											<td style="text-align: left; width: 4%">1</td>
 											<td style="text-align: left; width: 5%">1</td>
-											<td style="text-align: left; width: 4%">A</td>
+											<td style="text-align: center; width: 4%">A</td>
 											<td style="text-align: left; width: 10%">101</td>
 											<td style="text-align: center; width: 6%">20</td>
 											<td style="text-align: left; width: 5%">3.in</td>
@@ -569,7 +520,7 @@
 											<td style="text-align: left; width: 14%">
 												ASTM A216 WCC
 											</td>
-											<td style="text-align: left">1</td>
+											<td style="text-align: right">1</td>
 											<td style="text-align: center; width: 6%">1</td>
 											<td style="text-align: right">1</td>
 											<td style="text-align: center; width: 70px">
@@ -580,7 +531,7 @@
 										<tr>
 											<td style="text-align: left; width: 4%">1</td>
 											<td style="text-align: left; width: 5%">1</td>
-											<td style="text-align: left; width: 4%">A</td>
+											<td style="text-align: center; width: 4%">A</td>
 											<td style="text-align: left; width: 10%">101</td>
 											<td style="text-align: center; width: 6%">20</td>
 											<td style="text-align: left; width: 5%">3.in</td>
@@ -590,7 +541,7 @@
 											<td style="text-align: left; width: 14%">
 												ASTM A216 WCC
 											</td>
-											<td style="text-align: left">1</td>
+											<td style="text-align: right">1</td>
 											<td style="text-align: center; width: 6%">1</td>
 											<td style="text-align: right">1</td>
 											<td style="text-align: center; width: 70px">
@@ -601,7 +552,7 @@
 										<tr>
 											<td style="text-align: left; width: 4%">1</td>
 											<td style="text-align: left; width: 5%">1</td>
-											<td style="text-align: left; width: 4%">A</td>
+											<td style="text-align: center; width: 4%">A</td>
 											<td style="text-align: left; width: 10%">101</td>
 											<td style="text-align: center; width: 6%">20</td>
 											<td style="text-align: left; width: 5%">3.in</td>
@@ -611,13 +562,78 @@
 											<td style="text-align: left; width: 14%">
 												ASTM A216 WCC
 											</td>
-											<td style="text-align: left">1</td>
+											<td style="text-align: right">1</td>
 											<td style="text-align: center; width: 6%">1</td>
 											<td style="text-align: right">1</td>
 											<td style="text-align: center; width: 70px">
 												<i class="fa-solid fa-print"></i>
 											</td>
 										</tr>
+
+										<tr>
+											<td style="text-align: left; width: 4%">1</td>
+											<td style="text-align: left; width: 5%">1</td>
+											<td style="text-align: center; width: 4%">A</td>
+											<td style="text-align: left; width: 10%">101</td>
+											<td style="text-align: center; width: 6%">20</td>
+											<td style="text-align: left; width: 5%">3.in</td>
+											<td style="text-align: left; width: 7%">20-4401</td>
+											<td style="text-align: left; width: 6%">Globe</td>
+											<td style="text-align: left; width: 7%">150</td>
+											<td style="text-align: left; width: 14%">
+												ASTM A216 WCC
+											</td>
+											<td style="text-align: right">1</td>
+											<td style="text-align: center; width: 6%">1</td>
+											<td style="text-align: right">1</td>
+											<td style="text-align: center; width: 70px">
+												<i class="fa-solid fa-print"></i>
+											</td>
+										</tr>
+
+										<tr>
+											<td style="text-align: left; width: 4%">1</td>
+											<td style="text-align: left; width: 5%">1</td>
+											<td style="text-align: center; width: 4%">A</td>
+											<td style="text-align: left; width: 10%">101</td>
+											<td style="text-align: center; width: 6%">20</td>
+											<td style="text-align: left; width: 5%">3.in</td>
+											<td style="text-align: left; width: 7%">20-4401</td>
+											<td style="text-align: left; width: 6%">Globe</td>
+											<td style="text-align: left; width: 7%">150</td>
+											<td style="text-align: left; width: 14%">
+												ASTM A216 WCC
+											</td>
+											<td style="text-align: right">1</td>
+											<td style="text-align: center; width: 6%">1</td>
+											<td style="text-align: right">1</td>
+											<td style="text-align: center; width: 70px">
+												<i class="fa-solid fa-print"></i>
+											</td>
+										</tr>
+
+										<tr>
+											<td style="text-align: left; width: 4%">1</td>
+											<td style="text-align: left; width: 5%">1</td>
+											<td style="text-align: center; width: 4%">A</td>
+											<td style="text-align: left; width: 10%">101</td>
+											<td style="text-align: center; width: 6%">20</td>
+											<td style="text-align: left; width: 5%">3.in</td>
+											<td style="text-align: left; width: 7%">20-4401</td>
+											<td style="text-align: left; width: 6%">Globe</td>
+											<td style="text-align: left; width: 7%">150</td>
+											<td style="text-align: left; width: 14%">
+												ASTM A216 WCC
+											</td>
+											<td style="text-align: right">1</td>
+											<td style="text-align: center; width: 6%">1</td>
+											<td style="text-align: right">1</td>
+											<td style="text-align: center; width: 70px">
+												<i class="fa-solid fa-print"></i>
+											</td>
+										</tr>
+
+                                        
 									</tbody>
 								</table>
 							</div>
@@ -630,7 +646,7 @@
 	</body>
 </html>
 
-<script>
+<!-- <script>
 	$(document).ready(function () {
 		$('[data-toggle="tooltip"]').tooltip();
 	});
@@ -659,4 +675,4 @@
 			mainContent.classList.toggle("main-content-expanded");
 		});
 	});
-</script>
+</script> -->
